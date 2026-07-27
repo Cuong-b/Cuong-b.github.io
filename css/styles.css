@@ -14,6 +14,10 @@ body {
     color: var(--text);
 }
 
+section {
+    padding: 4rem 0;
+}
+
 /*==== Color ====*/
 :root{
 
@@ -31,8 +35,9 @@ body {
 
 /*==== Typography ====*/
 h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -50,7 +55,7 @@ p {
 
 /*==== Project Styles ====*/
 
-.project-container {
+.projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -63,6 +68,12 @@ p {
     border:1px solid var(--secondary);
     border-radius:10px;
     background: var(--surface);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /*==== Header Styles ====*/
@@ -73,6 +84,20 @@ p {
     padding:3rem 0;
     text-align:center;
 }
+
+.hero-subtitle{
+    font-size:1.3rem;
+    color:var(--secondary);
+    margin-bottom:1.5rem;
+}
+
+.hero-description{
+    font-size:1.1rem;
+    max-width: 65ch;
+}
+
+
+
 
 /* ==== Navigation Styles ==== */
 .navbar {
@@ -101,3 +126,18 @@ text-decoration:underline;
 
 }
 
+/*==== Button Styles ====*/
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 2rem;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
