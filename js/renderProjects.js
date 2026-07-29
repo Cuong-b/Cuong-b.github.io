@@ -12,7 +12,7 @@ function createProjectCard(project) {
     card.classList.add('project-card');
 
     const title = document.createElement('h3');
-    title.textContent = project.name;
+    title.textContent = project.title;
 
     const subtitle = document.createElement('p');
     subtitle.textContent = project.subtitle;
@@ -23,4 +23,28 @@ function createProjectCard(project) {
     card.appendChild(subtitle);
     // card.appendChild(description);
     return card;
+}
+
+function createTechnologyBadge(technology) {
+    const badge = document.createElement('span');
+    badge.classList.add('technology-badge');
+    badge.textContent = technology;
+    return badge;
+}
+
+function createGithubLink(githubUrl) {
+    const link = document.createElement('a');
+    link.href = githubUrl;
+    link.textContent = 'View on GitHub';
+    link.target = '_blank';
+    return link;
+}
+
+function createDemoButton(demoUrl) {
+    const button = document.createElement('a');
+    button.href = demoUrl;
+    button.textContent = 'View Demo';
+    button.classList.add('demo-button');
+    button.target = '_blank';
+    return button;
 }
