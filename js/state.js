@@ -1,4 +1,4 @@
-const state = {
+export const state = {
     selectedCategory: 'All',
     featuredOnly: false,
     searchText: '',

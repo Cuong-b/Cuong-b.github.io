@@ -1,5 +1,5 @@
 import { createTechnologiesContainer } from './components/createTechnologyBadge.js';
-import { createButton } from './components/createButton.js';
+import { createLink } from './components/createLink.js';
 
 export function renderProjects(projects, container) {
     console.log("Rendering projects:", projects);
@@ -20,10 +20,10 @@ function createProjectCard(project) {
     card.appendChild(createTechnologiesContainer(project));
 
     if (project.github) {
-        card.appendChild(createButton(project.github, 'View on GitHub'));
+        card.appendChild(createLink(project.github, 'View on GitHub'));
     }
     if (project.demo) {
-        card.appendChild(createButton(project.demo, 'View Demo'));
+        card.appendChild(createLink(project.demo, 'View Demo'));
     }
 
     return card;
