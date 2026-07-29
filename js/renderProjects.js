@@ -1,3 +1,6 @@
+import { createTechnologiesContainer } from './components/createTechnologyBadge.js';
+import { createButton } from './components/createButton.js';
+
 export function renderProjects(projects, container) {
     console.log("Rendering projects:", projects);
     console.log("Container:", container);
@@ -36,31 +39,5 @@ function createSubtitleElement(project) {
     const subtitleElement = document.createElement('p');
     subtitleElement.textContent = project.subtitle;
     return subtitleElement;
-}
-
-function createTechnologiesContainer(project) {
-    const container = document.createElement('div');
-    container.classList.add('technologies-container');
-    project.technologies.forEach(tech => {
-        const badge = createTechnologyBadge(tech);
-        container.appendChild(badge);
-    });
-    return container;
-}
-
-function createTechnologyBadge(technology) {
-    const badge = document.createElement('span');
-    badge.classList.add('technology-badge');
-    badge.textContent = technology;
-    return badge;
-}
-
-function createButton(url, text) {
-    const button = document.createElement('a');
-    button.href = url;
-    button.textContent = text;
-    button.classList.add('button');
-    button.target = '_blank';
-    return button;
 }
 
