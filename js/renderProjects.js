@@ -1,21 +1,26 @@
-const container =
-document.querySelector(".projects-container");
+export function renderProjects(projects, container) {
+    console.log("Rendering projects:", projects);
+    console.log("Container:", container);
+    projects.forEach(project => {
+        const card = createProjectCard(project);
+        container.appendChild(card);
+    });
+}
 
-projects.forEach(project=>{
+function createProjectCard(project) {
+    const card = document.createElement('article');
+    card.classList.add('project-card');
 
-const card =
-document.createElement("article");
+    const title = document.createElement('h3');
+    title.textContent = project.name;
 
-card.classList.add("project-card");
+    const subtitle = document.createElement('p');
+    subtitle.textContent = project.subtitle;
 
-card.innerHTML=`
-
-<h3>${project.name}</h3>
-
-<p>${project.subtitle}</p>
-
-`;
-
-container.appendChild(card);
-
-});
+    // const description = document.createElement('p');
+    // description.textContent = project.description;
+    card.appendChild(title);
+    card.appendChild(subtitle);
+    // card.appendChild(description);
+    return card;
+}
