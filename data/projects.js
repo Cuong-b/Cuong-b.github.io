@@ -10,7 +10,7 @@ technologies: [],
 image: null,
 github: null,
 demo: null,
-featured:true
+featured:false
 },
 
 {
@@ -23,7 +23,7 @@ technologies: [],
 image: null,
 github: null,
 demo: null,
-featured:true
+featured:false
 },
 
 {

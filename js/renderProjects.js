@@ -1,28 +1,51 @@
 export function renderProjects(projects, container) {
     console.log("Rendering projects:", projects);
     console.log("Container:", container);
+    const fragment = document.createDocumentFragment();
     projects.forEach(project => {
-        const card = createProjectCard(project);
-        container.appendChild(card);
+        fragment.appendChild(createProjectCard(project));
     });
+    container.appendChild(fragment);
 }
 
 function createProjectCard(project) {
     const card = document.createElement('article');
     card.classList.add('project-card');
 
-    const title = document.createElement('h3');
-    title.textContent = project.title;
+    card.appendChild(createTitleElement(project));
+    card.appendChild(createSubtitleElement(project));
+    card.appendChild(createTechnologiesContainer(project));
 
-    const subtitle = document.createElement('p');
-    subtitle.textContent = project.subtitle;
+    if (project.github) {
+        card.appendChild(createButton(project.github, 'View on GitHub'));
+    }
+    if (project.demo) {
+        card.appendChild(createButton(project.demo, 'View Demo'));
+    }
 
-    // const description = document.createElement('p');
-    // description.textContent = project.description;
-    card.appendChild(title);
-    card.appendChild(subtitle);
-    // card.appendChild(description);
     return card;
+}
+
+function createTitleElement(project) {
+    const titleElement = document.createElement('h3');
+    titleElement.textContent = project.title;
+    return titleElement;
+}
+
+function createSubtitleElement(project) {
+    const subtitleElement = document.createElement('p');
+    subtitleElement.textContent = project.subtitle;
+    return subtitleElement;
+}
+
+function createTechnologiesContainer(project) {
+    const container = document.createElement('div');
+    container.classList.add('technologies-container');
+    project.technologies.forEach(tech => {
+        const badge = createTechnologyBadge(tech);
+        container.appendChild(badge);
+    });
+    return container;
 }
 
 function createTechnologyBadge(technology) {
@@ -32,19 +55,12 @@ function createTechnologyBadge(technology) {
     return badge;
 }
 
-function createGithubLink(githubUrl) {
-    const link = document.createElement('a');
-    link.href = githubUrl;
-    link.textContent = 'View on GitHub';
-    link.target = '_blank';
-    return link;
-}
-
-function createDemoButton(demoUrl) {
+function createButton(url, text) {
     const button = document.createElement('a');
-    button.href = demoUrl;
-    button.textContent = 'View Demo';
-    button.classList.add('demo-button');
+    button.href = url;
+    button.textContent = text;
+    button.classList.add('button');
     button.target = '_blank';
     return button;
 }
+
