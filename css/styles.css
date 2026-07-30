@@ -29,8 +29,9 @@ section {
 
 --secondary:#4B5563;
 
---accent:#2563EB;
+--accent:#517ff3;
 
+--secondAccent: #90daee;
 }
 
 /*==== Typography ====*/
@@ -129,13 +130,18 @@ text-decoration:underline;
 /*==== Button Styles ====*/
 .button {
     display: inline-block;
-    padding: 0.9rem 1.5rem;
-    background-color: var(--accent);
-    color: #fff;
+    padding: 0.75rem 0.75rem;
+    background-color: var(--secondAccent);
+    color: var(--text);
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 2rem;
+    border-radius: 20px;
+    margin: 0.25rem 0.1rem;
     transition: 0.2s;
+}
+
+.activeButton{
+    background-color: var(--accent);
+    color: #ffffff;
 }
 
 .button:hover {
