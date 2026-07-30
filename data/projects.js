@@ -17,7 +17,7 @@ featured:false
 id: "artdutrait",
 title:"Art du Trait",
 subtitle: "Computational Geometry Toolkit",
-categories: ["Geometry", "Algorithms", "Visualization"],
+categories: ["Geometry", "Algorithms", "Visualization", "Design"],
 description: "Art du Trait is a computational geometry toolkit that provides algorithms and data structures for geometric computations, including convex hulls, Voronoi diagrams, and Delaunay triangulations.",
 technologies: [],
 image: null,

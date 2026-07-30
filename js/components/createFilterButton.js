@@ -1,20 +1,11 @@
-import { createButton } from "./createButton"
-import { state } from "../state"
-import { render } from "../render";
+import { createButton } from "./createButton.js"
+import { state } from "../state.js"
+import { render } from "../render.js";
 
-export function createFilterButton(filter){
-    const onClick = () => {
-        if(filter.active){
-            state.selectedCategory = "All"
-            filter.active = false;
-            render();
-        }
-        else {
-        state.selectedCategory = filter.label;
-        filter.active = true;
+export function createFilterButton(category){
+    const button = createButton(category, () => {
+        state.selectedCategory = category;
         render();
-        }
-    };
-    const button = createButton(filter.label, onClick)
+    })
     return button;
 }
