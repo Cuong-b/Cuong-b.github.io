@@ -1,3 +1,62 @@
+:root {
+
+    /* ---------- Colors ---------- */
+
+    --color-bg: #F9FAFB;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-text-light: #6b7280;
+
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+
+    --color-secondary: #4B5563;
+
+    --color-border: #e5e7eb;
+
+    --color-accent:#517ff3;
+    --color-accent2: #90daee;
+
+    /* ---------- Spacing ---------- */
+
+    --space-xs: .25rem;
+    --space-sm: .5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    --space-2xl: 6rem;
+
+    /* ---------- Typography ---------- */
+
+    --font-heading:
+        "Inter",
+        system-ui,
+        sans-serif;
+
+    --font-body:
+        system-ui,
+        sans-serif;
+
+    /* ---------- Radius ---------- */
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+
+    /* ---------- Shadows ---------- */
+
+    --shadow-sm:
+        0 2px 8px rgba(0,0,0,.06);
+
+    --shadow-md:
+        0 8px 24px rgba(0,0,0,.08);
+
+    /* ---------- Animation ---------- */
+
+    --transition:
+        180ms ease;
+}
+
 /* ==== Global Styles ==== */
 *{
     box-sizing: border-box;
@@ -10,28 +69,12 @@ body {
     margin: 0 auto;
     padding: 2rem;
     line-height: 1.6;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 section {
     padding: 1rem 0;
-}
-
-/*==== Color ====*/
-:root{
-
---background:#F9FAFB;
-
---surface:#FFFFFF;
-
---text:#1F2937;
-
---secondary:#4B5563;
-
---accent:#517ff3;
-
---secondAccent: #90daee;
 }
 
 /*==== Typography ====*/
@@ -66,9 +109,9 @@ p {
 
 .project-card{
     padding:1.5rem;
-    border:1px solid var(--secondary);
+    border:1px solid var(--color-secondary);
     border-radius:10px;
-    background: var(--surface);
+    background: var(--color-surface);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -88,7 +131,7 @@ p {
 
 .hero-subtitle{
     font-size:1.3rem;
-    color:var(--secondary);
+    color:var(--color-secondary);
     margin-bottom:1.5rem;
 }
 
@@ -115,7 +158,7 @@ margin-right:20px;
 
 text-decoration:none;
 
-color: var(--accent);
+color: var(--color-accent);
 
 font-weight:bold;
 
@@ -131,8 +174,8 @@ text-decoration:underline;
 .button {
     display: inline-block;
     padding: 0.75rem 0.75rem;
-    background-color: var(--secondAccent);
-    color: var(--text);
+    background-color: var(--color-accent2);
+    color: var(--color-text);
     text-decoration: none;
     border-radius: 20px;
     margin: 0.25rem 0.1rem;
@@ -140,7 +183,7 @@ text-decoration:underline;
 }
 
 .activeButton{
-    background-color: var(--accent);
+    background-color: var(--color-accent);
     color: #ffffff;
 }
 
