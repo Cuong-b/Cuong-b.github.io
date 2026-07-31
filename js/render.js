@@ -14,7 +14,7 @@ export function render() {
     const projectsContainer = document.querySelector('#all-projects');
     if (projectsContainer) {
         projectsContainer.replaceChildren(); // Clear existing content
-        renderProjects(visibleProjects, projectsContainer);
+        renderProjects(visibleProjects.filter(p => p.display), projectsContainer);
     }
 
     const filtersContainer = document.querySelector('.filters-container');

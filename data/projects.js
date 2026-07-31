@@ -10,7 +10,8 @@ technologies: [],
 image: null,
 github: null,
 demo: null,
-featured:false
+featured:false,
+display:false
 },
 
 {
@@ -23,7 +24,8 @@ technologies: [],
 image: null,
 github: null,
 demo: null,
-featured:false
+featured:false,
+display:false
 },
 
 {
@@ -36,7 +38,8 @@ technologies: [],
 image: null,
 github: null,
 demo: null,
-featured:true
+featured:true,
+display:true
 },
 
 {
@@ -49,7 +52,8 @@ technologies: [],
 image: null,
 github: null,
 demo: null,
-featured:true
+featured:true,
+display:true
 }
 
 ];
