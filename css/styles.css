@@ -118,6 +118,47 @@ body {
     line-height: 1.6;
     background: linear-gradient(180deg, var(--paper), var(--paper-dark));
     color: var(--color-text);
+    position: relative;
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image: linear-gradient( rgba(70,90,70,.08) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(70,90,70,.08) 1px, transparent 1px),
+    linear-gradient( rgba(70,90,70,.16) 1px, transparent 1px), /* major grid lines */
+    linear-gradient(90deg,rgba(70,90,70,.16) 1px, transparent 1px);
+
+    background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.04;
+
+    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,.9) 0, transparent 1px),
+    radial-gradient(circle at 70% 80%, rgba(0,0,0,.4) 0, transparent 1px);
+
+    background-size:180px 180px, 220px 220px;
+
+    z-index:-90;
+
 }
 
 main {
@@ -164,6 +205,15 @@ p {
     color: var(--color-text-light);
     font-size: 1.05rem;
     max-width: 65ch;
+}
+
+/*==== Header Styles ====*/
+
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(10px);
 }
 
 /*==== Project Styles ====*/
@@ -220,13 +270,26 @@ p {
 
 
 /* ==== Navigation Styles ==== */
-.navbar {
-display:flex;
-justify-content:space-evenly;
-align-items: center;
-gap:2rem;
-padding:1rem 0 1rem 0;
-background-color: var(--color-navbar);
+
+.navbar{
+    border:2px solid rgba(60,80,60,.25);
+    background:rgba(245,248,239,.82);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 1.5rem;
+    margin-top:1rem;
+    border-radius:8px;
+}
+
+.drawing-title{
+    display:flex;
+    flex-direction:column;
+}
+
+.drawing-name{
+    font-weight:700;
+    letter-spacing:.08em;
 }
 
 nav a{
@@ -284,7 +347,7 @@ text-decoration:underline;
 }
 
 #theme-toggle {
-    background-color: var(--color-secondary)
+    background-color: var(#558a8c)
 }
 
 /*==== List Styles ====*/
