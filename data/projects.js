@@ -29,6 +29,20 @@ display:false
 },
 
 {
+id: "seniorthesis",
+title:"Undergraduate Honors Thesis",
+subtitle: "Using Convolutional Neural Networks for Event Pileup Discrimination in CUPID.",
+categories: ["Scientific Computing", "Research", "Machine Learning"],
+description: "This project is my undergraduate honors thesis, where I applied convolutional neural networks (CNNs) to discriminate event pileup in the CUPID experiment. The goal was to improve the accuracy of event classification in particle physics experiments.",
+technologies: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "LaTeX"],
+image: null,
+github: null,
+demo: null,
+featured:true,
+display:true
+},
+
+{
 id: "visualization",
 title:"Scientific Visualization",
 subtitle: "Science Visualizations I've Created!",

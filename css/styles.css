@@ -11,6 +11,7 @@
     --color-text: #1f2937;
     --color-text-light: lab(37.8% 0.72 -6.29);
     --color-text-white: #ffffff;
+    --color-navbar-text: #1f2937;
 
     --color-primary: #2563eb;
     --color-primary-dark: #1d4ed8;
@@ -241,6 +242,16 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/*==== Technology Badge Styles ====*/
+.technologies-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 1rem;
+    color: var(--color-text-light);
+}
+
 /*==== Header Styles ====*/
 .hero{
     display:flex;
@@ -298,7 +309,7 @@ margin-right:20px;
 
 text-decoration:none;
 
-color: var(--color-accent);
+color: var(--color-navbar-text);
 
 font-weight:bold;
 
@@ -347,7 +358,7 @@ text-decoration:underline;
 }
 
 #theme-toggle {
-    background-color: var(#558a8c)
+    background-color: var(--color-accent2)
 }
 
 /*==== List Styles ====*/

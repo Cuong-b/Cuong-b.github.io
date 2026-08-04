@@ -1,6 +1,9 @@
 export function createTechnologiesContainer(project) {
     const container = document.createElement('div');
     container.classList.add('technologies-container');
+    const title = document.createElement('h4');
+    title.textContent = 'Technologies Used:';
+    container.appendChild(title);
     project.technologies.forEach(tech => {
         const badge = createTechnologyBadge(tech);
         container.appendChild(badge);
