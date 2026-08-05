@@ -3,6 +3,7 @@ import {state} from '../js/state.js';
 import {renderProjects} from '../js/renderProjects.js';
 import { renderFilters } from './renderFilters.js';
 import { projectFilters } from '../data/projectFilters.js';
+import { renderProjectPage } from './renderProjectPage.js';
 
 export function render() {
     const featuredContainer = document.querySelector('#featured-projects');
@@ -21,6 +22,16 @@ export function render() {
     if (filtersContainer){
         filtersContainer.replaceChildren(); //Clear existing content
         renderFilters(projectFilters, filtersContainer);
+    }
+
+    const ProjectPageContainer = document.querySelector('.project-content');
+    console.log("ProjectPageContainer:", ProjectPageContainer);
+    if (ProjectPageContainer){
+        const projectId = ProjectPageContainer.dataset.projectId;
+        const project = projects.find(p => p.id === projectId);
+        if (project) {
+            renderProjectPage();
+        }
     }
 
 }

@@ -13,9 +13,9 @@
     --color-text-white: #ffffff;
     --color-navbar-text: #1f2937;
 
-    --color-primary: #2563eb;
-    --color-primary-dark: #1d4ed8;
-    --color-primary-hover: #3268ff;
+    --color-primary: #74d485;
+    --color-primary-dark: #559060;
+    --color-primary-hover: #9ee5ab;
 
     --color-secondary: #4B5563;
 
@@ -240,6 +240,10 @@ p {
 .project-card:hover{
     transform: translateY(-5px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .button{
+    margin: 1rem 0 0.5rem 0;
 }
 
 /*==== Technology Badge Styles ====*/

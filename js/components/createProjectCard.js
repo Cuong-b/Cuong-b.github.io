@@ -8,13 +8,19 @@ export function createProjectCard(project) {
     card.appendChild(createTitleElement(project));
     card.appendChild(createSubtitleElement(project));
     card.appendChild(createTechnologiesContainer(project));
+    
+    if (project.page) {
+        const pageLink = createLink(project.page, 'View Project');
+        pageLink.target = '_self'; // Open in the same tab
+        card.appendChild(pageLink);
+    }
 
-    if (project.github) {
-        card.appendChild(createLink(project.github, 'View on GitHub'));
-    }
-    if (project.demo) {
-        card.appendChild(createLink(project.demo, 'View Demo'));
-    }
+    // if (project.github) {
+    //     card.appendChild(createLink(project.github, 'View on GitHub'));
+    // }
+    // if (project.demo) {
+    //     card.appendChild(createLink(project.demo, 'View Demo'));
+    // }
 
     return card;
 }
