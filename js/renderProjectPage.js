@@ -66,4 +66,11 @@ function createProjectLinks(project, container) {
         demoLink.textContent = 'Live Demo';
         container.appendChild(demoLink);
     }
+    if (project.file) {
+        const fileLink = document.createElement('a');
+        fileLink.classList.add('btn');
+        fileLink.href = project.file;
+        fileLink.textContent = 'Download File';
+        container.appendChild(fileLink);
+    }
 }

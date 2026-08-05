@@ -43,7 +43,7 @@ image: null,
 page: "/pages/projects/seniorthesis.html",
 github: null,
 demo: null,
-file: null,
+file: "/assets/thesis/Senior_Thesis_Cuong_Bui_Signed.pdf",
 featured:true,
 display:true
 },
