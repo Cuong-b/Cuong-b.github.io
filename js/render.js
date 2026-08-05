@@ -8,9 +8,14 @@ import { createNavbar } from '/js/components/createNavbar.js';
 import { createFooter } from '/js/components/createFooter.js';
 
 export function render() {
-
-    createNavbar();
-    createFooter();
+    const headerContainer = document.querySelector('header');
+    const footerContainer = document.querySelector('footer');
+    if(headerContainer.children.length === 0) {
+        createNavbar();
+    }
+    if(footerContainer.children.length === 0) {
+        createFooter();
+    }
 
     const featuredContainer = document.querySelector('#featured-projects');
     if (featuredContainer) {
