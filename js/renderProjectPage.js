@@ -26,11 +26,14 @@ export function renderProjectPage() {
 }
 
 function createProjectHeader(project, container) {
-    const title = document.createElement('h2');
+    const title = document.createElement('h1');
     title.textContent = project.title;
     const description = document.createElement('p');
     description.textContent = project.description;
+    const subtitle = document.createElement('h2');
+    subtitle.textContent = project.subtitle;
     container.appendChild(title);
+    container.appendChild(subtitle);
     container.appendChild(description);
 }
 
@@ -39,6 +42,7 @@ function createProjectDetails(project, container) {
     title.textContent = 'Technologies Used:';
     container.appendChild(title);
     const details = document.createElement('ul');
+    details.classList.add('list');
     project.technologies.forEach(tech => {
         const listItem = document.createElement('li');
         listItem.textContent = tech;

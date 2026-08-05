@@ -9,7 +9,7 @@
     --color-surface: #ffffff;
 
     --color-text: #1f2937;
-    --color-text-light: lab(37.8% 0.72 -6.29);
+    --color-text-light: lab(23.79% 4.17 -6.95);
     --color-text-white: #ffffff;
     --color-navbar-text: #1f2937;
 
@@ -205,7 +205,7 @@ p {
     font-family: var(--font-body);
     color: var(--color-text-light);
     font-size: 1.05rem;
-    max-width: 65ch;
+    max-width: 70ch;
 }
 
 /*==== Header Styles ====*/
