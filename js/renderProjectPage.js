@@ -21,6 +21,10 @@ export function renderProjectPage() {
                 projectLinks.replaceChildren(); // Clear existing content
                 createProjectLinks(project, projectLinks);
             }
+            const thesisDetails = document.querySelector(".pdf-viewer");
+            if (thesisDetails) {
+                changePDFSummary();
+            }
         }
     }
 }
@@ -73,4 +77,19 @@ function createProjectLinks(project, container) {
         fileLink.textContent = 'Download File';
         container.appendChild(fileLink);
     }
+}
+
+function changePDFSummary() {
+    const thesisDetails = document.querySelector(".pdf-viewer");
+    const summary = thesisDetails?.querySelector("summary");
+    const opened = thesisDetails.dataset.summaryOpened || "Click to close the PDF viewer";
+    const closed = thesisDetails.dataset.summaryClosed || "Click to view the PDF";
+
+    thesisDetails?.addEventListener("toggle", () => {
+
+        summary.textContent = thesisDetails.open
+            ? closed
+            : opened;
+
+    });
 }

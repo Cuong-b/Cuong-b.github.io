@@ -1,1 +1,1 @@
-export const projectFilters = ["All", "Energy", "Visualization", "Design"];
+export const projectFilters = ["All", "Research", "Visualization", "Design"];
