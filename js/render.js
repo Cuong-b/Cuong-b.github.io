@@ -7,16 +7,7 @@ import { renderProjectPage } from './renderProjectPage.js';
 import { createNavbar } from '/js/components/createNavbar.js';
 import { createFooter } from '/js/components/createFooter.js';
 
-export function render() {
-    const headerContainer = document.querySelector('header');
-    const footerContainer = document.querySelector('footer');
-    if(headerContainer.children.length === 0) {
-        createNavbar();
-    }
-    if(footerContainer.children.length === 0) {
-        createFooter();
-    }
-
+export function renderPage() {
     const featuredContainer = document.querySelector('#featured-projects');
     if (featuredContainer) {
         renderProjects(projects.filter(p => p.featured), featuredContainer);
