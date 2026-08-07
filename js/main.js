@@ -5,6 +5,5 @@ import { createFooter } from '/js/components/createFooter.js';
 // import "./theme.js"
 
 createNavbar();
-
 renderPage();
 createFooter();
