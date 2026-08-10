@@ -17,7 +17,7 @@ export function createNavbar() {
 function generateNavbarContent(navbar, pageId) {
     navbar.appendChild(generateDrawingTitle(pageId));
     navbar.appendChild(generateNavLinks());
-    navbar.appendChild(generateThemeToggleButton());
+    // navbar.appendChild(generateThemeToggleButton());
 }
 
 function generateDrawingTitle(pageId) {

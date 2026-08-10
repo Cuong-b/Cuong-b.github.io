@@ -125,11 +125,13 @@ body {
 
 /*==== Drafting Grid Background ====*/
 body::before{
-
     content:"";
+
     position:fixed;
-    z-index:-2;
     inset:0;
+
+    z-index:-1;
+
     pointer-events:none;
 
     background-image: linear-gradient( rgba(70,90,70,.08) 1px, transparent 1px),
@@ -144,6 +146,7 @@ body::before{
 main {
     width: min(1200px, 92vw);
     margin-inline: auto;
+
     padding-inline: clamp(1rem, 3vw, 2rem);
 
     line-height: 1.6;
@@ -280,7 +283,6 @@ p {
 
 .navbar{
     display:flex;
-    justify-content:space-between;
     align-items:center;
     gap: 1rem;
 
@@ -298,6 +300,7 @@ p {
 .drawing-title{
     display:flex;
     flex-direction:column;
+    flex: 1;
 }
 
 .drawing-name{
@@ -305,20 +308,37 @@ p {
     letter-spacing:.08em;
 }
 
-nav a{
-    margin-inline: clamp(1rem, 3vw, 2rem);
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+
+    flex: 1;
+}
+
+.nav-links a{
     text-decoration: none;
 
     color: var(--color-navbar-text);
 
     font-weight: 600;
+
+    margin: 0;
+
+    white-space: nowrap;
 }
 
-nav a:hover{
+.nav-links a:hover{
 
 text-decoration:underline;
 
+}
+
+.navbar::after {
+    content: "";
+    flex: 1;
 }
 
 /*==== Button Styles ====*/
@@ -375,4 +395,31 @@ text-decoration:underline;
 
     max-width: 65ch;
     
+}
+
+/*==== Media Queries ====*/
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .drawing-title {
+        flex: 1;
+    }
+
+    .navbar::after {
+        display: none;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex: none;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: .75rem 1rem;
+    }
 }
