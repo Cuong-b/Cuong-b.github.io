@@ -14,16 +14,16 @@
     --color-navbar-text: #1f2937;
 
     --color-primary: #74d485;
-    --color-primary-dark: #559060;
-    --color-primary-hover: #9ee5ab;
+    --color-primary-dark: #579162;
+    --color-primary-hover: #74c383;
 
     --color-secondary: #4B5563;
 
     --color-border: #44694f;
     --color-navbar: #59a05a7b;
 
-    --color-accent:#517ff3;
-    --color-accent2: #90daee;
+    --color-accent:#73ac59;
+    --color-accent2: #a2c3a6;
 
     /* ---------- Spacing ---------- */
 
@@ -406,7 +406,8 @@ p {
     align-items: center;
     justify-content: center;
     gap: .5rem;
-    padding: 0.75rem .9rem;
+    padding-block: clamp(0.5rem, 2vw, 0.75rem);
+    padding-inline: clamp(0.75rem, 3vw, 1rem);
     background-color: var(--color-accent2);
     color: var(--color-text);
     text-decoration: none;
@@ -454,6 +455,19 @@ p {
 
     max-width: 65ch;
     
+}
+
+/*==== Document & Image Styles ====*/
+.document {
+  width: 100%;
+  max-width: min(950px, 95vw);
+  margin: 0 auto;
+}
+
+.document img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /*==== Media Queries ====*/
