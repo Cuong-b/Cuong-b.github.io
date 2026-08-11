@@ -16,6 +16,7 @@ export function createNavbar() {
 
 function generateNavbarContent(navbar, pageId) {
     navbar.appendChild(generateDrawingTitle(pageId));
+    navbar.appendChild(generateHamburgerMenu(navbar))
     navbar.appendChild(generateNavLinks());
     // navbar.appendChild(generateThemeToggleButton());
 }
@@ -56,4 +57,26 @@ function generateThemeToggleButton() {
     themeToggleButton.classList.add('theme-button');
     themeToggleButton.textContent = '☾';
     return themeToggleButton;
+}
+
+function generateHamburgerMenu(navContainer) {
+    const menuButton = document.createElement("button");
+
+    menuButton.classList.add("menu-toggle");
+
+    menuButton.type = "button";
+    menuButton.setAttribute("aria-label", "Toggle navigation");
+    menuButton.setAttribute("aria-expanded", "false");
+
+    menuButton.textContent = "=";
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = navContainer.classList.toggle("menu-open");
+
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+
+        menuButton.textContent = isOpen ? "×" : "☰"
+    });
+
+    return menuButton;
 }

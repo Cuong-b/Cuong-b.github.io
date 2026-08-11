@@ -1,63 +1,57 @@
 /*=== Project Page Styles ===*/
 .project-page {
-    padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
-    justify-content: center;
 }
 
 .project-content {
-    padding: 2rem;
+    padding: clamp(1rem, 4vw, 2rem);
 }
 
 .project-header {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-block: clamp(0.5rem, 2vw, 1rem);
 }
 
 .project-body {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-block: clamp(1rem, 4vw, 2rem);
 }
 
 .project-details {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-block: clamp(1rem, 4vw, 2rem);
 }
 
 .project-links {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-block: clamp(1rem, 4vw, 2rem);
 }
 
 /*==== Typography ====*/
 .abstract {
     text-align: justify;
-    font-size: 1.1rem;
-    max-width: 75ch;
+    font-size: clamp(0.75rem, 2vw, 1.1rem);
+    max-width: 70ch;
 }
 
 .project-header h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     margin-bottom: 1rem;
 }
 
 .project-header h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: clamp(1rem, 4vw, 2rem);
     font-style: italic;
 }
 
 
 .project-header p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-indent: 2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: clamp(0.5rem, 3vw, 1rem);
+    text-indent: clamp(1rem, 4vw, 2rem);
     text-align: justify;
 }
 
 h3 {
-    margin-top: 2rem;
+    margin-block: clamp(1rem, 4vw, 2rem);;
 }
 
 /*==== Project Links Styles ====*/
