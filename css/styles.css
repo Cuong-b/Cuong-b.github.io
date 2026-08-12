@@ -124,8 +124,21 @@ body {
 }
 
 .container {
-    width: min(1200px, 92vw);
     margin-inline: auto;
+}
+
+/*==== About Page ====*/
+.about-content img{
+    float: left;
+    width: 50%;
+    margin: 0 2rem 1rem 0;
+}
+
+.about-content p{
+    max-width: 100%;
+    text-indent: clamp(1rem, 4vw, 2rem);
+    margin-top: clamp(0.75rem, 2vw, 1.5rem);
+    text-align: justify;
 }
 
 /*==== Drafting Grid Background ====*/
@@ -170,6 +183,13 @@ section {
     padding-block: clamp(2rem, 6vw, 4rem);
     padding-inline: clamp(0rem, 2vw, 1rem);
 }
+
+img {
+  display: inline;
+  width: 100%;
+  height: auto;
+}
+
 
 /*==== Typography ====*/
 h1 {
@@ -536,5 +556,11 @@ p {
     .nav-links a:focus-visible {
         outline: 3px solid var(--color-accent);
         outline-offset: 3px;
+    }
+
+    .about-content img{
+        float: none;
+        width: 100%;
+        margin: 0 0 24px 0;
     }
 }

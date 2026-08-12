@@ -60,8 +60,8 @@ page: null,
 github: null,
 demo: null,
 file: null,
-featured:true,
-display:true
+featured:false,
+display:false
 },
 
 {
@@ -69,15 +69,15 @@ id: 'woodworking',
 title: 'Woodworking',
 subtitle: 'Woodworking Projects and Designs!',
 categories: ['Craft', 'Design', 'Woodworking'],
-description: 'This project features a collection of woodworking projects and designs, including furniture, home decor, and custom pieces. It highlights my skills in woodworking and craftsmanship.',
+description: "This project features a collection of woodworking projects and designs I made as I'm learning the craft. Currently, I've been practicing a lot of turning on the lathe and also making wood rings.",
 technologies: [],
 image: null,
-page: null,
+page: "/pages/projects/woodworking.html",
 github: null,
 demo: null,
 file: null,
-featured:true,
-display:true
+featured:false,
+display:false
 }
 
 ];

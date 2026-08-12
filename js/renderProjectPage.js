@@ -42,6 +42,7 @@ function createProjectHeader(project, container) {
 }
 
 function createProjectDetails(project, container) {
+    if(project.technologies.length){
     const title = document.createElement('h3');
     title.textContent = 'Technologies Used:';
     container.appendChild(title);
@@ -52,7 +53,7 @@ function createProjectDetails(project, container) {
         listItem.textContent = tech;
         details.appendChild(listItem);
     });
-    container.appendChild(details);
+    container.appendChild(details);};
 }
 
 function createProjectLinks(project, container) {
