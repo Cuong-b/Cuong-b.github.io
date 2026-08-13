@@ -5,6 +5,7 @@ export function createNavbar() {
     if (header) {
         const navbar = document.createElement('nav');
         navbar.classList.add('navbar', 'container');
+        navbar.setAttribute("aria-label", "Main navigation");
         header.appendChild(navbar);
         const pageId = header.dataset.siteId;
         generateNavbarContent(navbar, pageId);

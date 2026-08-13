@@ -83,7 +83,7 @@ function createProjectLinks(project, container) {
 function changePDFSummary() {
     const thesisDetails = document.querySelector(".pdf-viewer");
     const summary = thesisDetails?.querySelector("summary");
-    const opened = thesisDetails.dataset.summaryOpened || "Click to close the PDF viewer";
+    const opened = thesisDetails.dataset.summaryOpened || "Click to close the PDF";
     const closed = thesisDetails.dataset.summaryClosed || "Click to view the PDF";
 
     thesisDetails?.addEventListener("toggle", () => {
