@@ -1,4 +1,5 @@
 import {projects} from '../data/projects.js';
+import { createLink } from './components/createLink.js';
 
 export function renderProjectPage() {
     const ProjectPageContainer = document.querySelector('.project-content');
@@ -58,30 +59,24 @@ function createProjectDetails(project, container) {
 
 function createProjectLinks(project, container) {
     if (project.github) {
-        const githubLink = document.createElement('a');
-        githubLink.classList.add('btn');
-        githubLink.href = project.github;
-        githubLink.target = "_blank";
         const githubLabel = container.dataset.githubLabel;
-        githubLink.textContent = githubLabel ? githubLabel :'GitHub Repository';
+        const githubText = githubLabel ? githubLabel :'GitHub Repository';
+        const githubLink = createLink(project.github, githubText);
+        githubLink.classList.add('btn');
         container.appendChild(githubLink);
     }
     if (project.demo) {
-        const demoLink = document.createElement('a');
-        demoLink.classList.add('btn');
-        demoLink.href = project.demo;
-        demoLink.target = "_blank";
         const demoLabel = container.dataset.demoLabel;
-        demoLink.textContent = demoLabel ? demoLabel :'Live Demo';
+        const demoText = demoLabel ? demoLabel :'Live Demo';
+        const demoLink = createLink(project.demo, demoText);
+        demoLink.classList.add('btn');
         container.appendChild(demoLink);
     }
     if (project.file) {
-        const fileLink = document.createElement('a');
-        fileLink.classList.add('btn');
-        fileLink.href = project.file;
-        fileLink.target = "_blank";
         const fileLabel = container.dataset.fileLabel;
-        fileLink.textContent = fileLabel ? fileLabel : 'Download File';
+        const fileText = fileLabel ? fileLabel : 'Download File';
+        const fileLink = createLink(project.file, fileText);
+        fileLink.classList.add('btn');
         container.appendChild(fileLink);
     }
 }
