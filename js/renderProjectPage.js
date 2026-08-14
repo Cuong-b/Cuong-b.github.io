@@ -61,6 +61,7 @@ function createProjectLinks(project, container) {
         const githubLink = document.createElement('a');
         githubLink.classList.add('btn');
         githubLink.href = project.github;
+        githubLink.target = "_blank";
         const githubLabel = container.dataset.githubLabel;
         githubLink.textContent = githubLabel ? githubLabel :'GitHub Repository';
         container.appendChild(githubLink);
@@ -69,6 +70,7 @@ function createProjectLinks(project, container) {
         const demoLink = document.createElement('a');
         demoLink.classList.add('btn');
         demoLink.href = project.demo;
+        demoLink.target = "_blank";
         const demoLabel = container.dataset.demoLabel;
         demoLink.textContent = demoLabel ? demoLabel :'Live Demo';
         container.appendChild(demoLink);
@@ -77,6 +79,7 @@ function createProjectLinks(project, container) {
         const fileLink = document.createElement('a');
         fileLink.classList.add('btn');
         fileLink.href = project.file;
+        fileLink.target = "_blank";
         const fileLabel = container.dataset.fileLabel;
         fileLink.textContent = fileLabel ? fileLabel : 'Download File';
         container.appendChild(fileLink);
