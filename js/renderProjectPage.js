@@ -61,21 +61,24 @@ function createProjectLinks(project, container) {
         const githubLink = document.createElement('a');
         githubLink.classList.add('btn');
         githubLink.href = project.github;
-        githubLink.textContent = 'GitHub Repository';
+        const githubLabel = container.dataset.githubLabel;
+        githubLink.textContent = githubLabel ? githubLabel :'GitHub Repository';
         container.appendChild(githubLink);
     }
     if (project.demo) {
         const demoLink = document.createElement('a');
         demoLink.classList.add('btn');
         demoLink.href = project.demo;
-        demoLink.textContent = 'Live Demo';
+        const demoLabel = container.dataset.demoLabel;
+        demoLink.textContent = demoLabel ? demoLabel :'Live Demo';
         container.appendChild(demoLink);
     }
     if (project.file) {
         const fileLink = document.createElement('a');
         fileLink.classList.add('btn');
         fileLink.href = project.file;
-        fileLink.textContent = 'Download File';
+        const fileLabel = container.dataset.fileLabel;
+        fileLink.textContent = fileLabel ? fileLabel : 'Download File';
         container.appendChild(fileLink);
     }
 }
