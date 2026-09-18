@@ -483,7 +483,37 @@ p {
     margin: 0.5rem 0.5rem 1rem;
 
     max-width: 65ch;
-    
+
+}
+
+.list.is-cycling {
+    display: block;
+    list-style: none;
+    text-align: center;
+    min-height: 2.4em;
+    margin: 1.5rem auto;
+}
+
+.list.is-cycling li {
+    display: none;
+}
+
+.list.is-cycling li.is-active {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    color: var(--color-accent);
+    animation: focus-flash 0.4s ease-out;
+}
+
+@keyframes focus-flash {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /*==== Document & Image Styles ====*/
@@ -571,6 +601,15 @@ p {
         float: none;
         width: 100%;
         margin: 0 0 24px 0;
+    }
+
+    .list.is-cycling {
+        margin: 1rem auto;
+        min-height: 2em;
+    }
+
+    .list.is-cycling li.is-active {
+        font-size: clamp(1.25rem, 6vw, 1.75rem);
     }
 }
 

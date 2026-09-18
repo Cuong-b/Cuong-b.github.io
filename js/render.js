@@ -6,8 +6,14 @@ import { projectFilters } from '../data/projectFilters.js';
 import { renderProjectPage } from './renderProjectPage.js';
 import { createNavbar } from '/js/components/createNavbar.js';
 import { createFooter } from '/js/components/createFooter.js';
+import { animateCurrentFocus } from './components/animateCurrentFocus.js';
 
 export function renderPage() {
+    const currentFocusList = document.querySelector('#current-focus .list');
+    if (currentFocusList) {
+        animateCurrentFocus(currentFocusList);
+    }
+
     const featuredContainer = document.querySelector('#featured-projects');
     if (featuredContainer) {
         renderProjects(projects.filter(p => p.featured), featuredContainer);
