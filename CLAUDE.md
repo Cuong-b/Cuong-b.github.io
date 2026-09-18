@@ -89,3 +89,23 @@ consistent or easier to repeat, say so, but don't silently deviate from it.
     this is an explicit goal, not just a means to an end.
   - Currently the repo has been pushed to `main` directly (see git log) — moving toward a
     branch-based workflow is a deliberate change, not a correction of something broken.
+
+## Learning checkpoint workflow
+
+This repo runs on two tracks: fast implementation here in Claude Code, deep
+understanding in a separate learning conversation. Don't blend them.
+
+- Implement features on branches efficiently. Don't stop to explain concepts
+  in depth mid-task — that separation is intentional, not a shortcut being
+  skipped.
+- Before merging a feature branch into `main`:
+  1. Run `/handoff` to generate `.claude/handoffs/<branch>.md`.
+  2. Tell Cuong the handoff is ready and that it's meant for his learning
+     conversation, not for explanation here.
+  3. Don't run `git merge` or open a PR until
+     `.claude/checkpoints/<branch>.passed` exists.
+- If Cuong asks to merge and that checkpoint file is missing, remind him once.
+  If he confirms he wants to proceed anyway, do it — this is a personal
+  discipline tool, not a security gate.
+- When asked to `/handoff`, keep it factual and brief. The "why" and "what
+  tradeoffs" discussion belongs in the learning conversation, not here.
