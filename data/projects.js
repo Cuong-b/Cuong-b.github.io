@@ -62,7 +62,7 @@ export const projects = [
     page: "gravitationallensing.html",
     github: "https://github.com/Cuong-b/gravitational-lensing",
     demo: "/assets/lensing/index.html",
-    file: "https://github.com/Cuong-b/gravitational-lensing/blob//main/python/notebook/Gravitational%20Lensing%20-%20Cuong%20Bui.ipynb",
+    file: "https://github.com/Cuong-b/gravitational-lensing/blob/main/python/notebook/Gravitational%20Lensing%20-%20Cuong%20Bui.ipynb",
     featured: true,
     display: true,
   },
