@@ -1,8 +1,6 @@
 # Cuong-b.github.io
 
-Cuong Bui's personal portfolio site — a lightweight hub that introduces who he is and presents
-his projects to employers and visitors. Built as a static site with vanilla HTML, CSS, and
-JavaScript (ES modules), no build step, and hosted on GitHub Pages.
+Cuong Bui's personal portfolio site
 
 **Live:** https://cuong-b.github.io/
 

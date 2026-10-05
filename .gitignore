@@ -1,2 +1,5 @@
 .DS_Store
 .claude
+
+# Large videos: exceed GitHub 100 MB file limit, host externally
+assets/dci/**/*.mp4

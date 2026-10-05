@@ -14,6 +14,7 @@ export const projects = [
     file: null,
     featured: false,
     display: false,
+    experience: false,
   },
 
   {
@@ -31,6 +32,7 @@ export const projects = [
     file: null,
     featured: false,
     display: false,
+    experience: false,
   },
 
   {
@@ -48,6 +50,7 @@ export const projects = [
     file: "/assets/thesis/Senior_Thesis_Cuong_Bui_Signed.pdf",
     featured: true,
     display: true,
+    experience: false,
   },
 
   {
@@ -65,23 +68,7 @@ export const projects = [
     file: "https://github.com/Cuong-b/gravitational-lensing/blob/main/python/notebook/Gravitational%20Lensing%20-%20Cuong%20Bui.ipynb",
     featured: true,
     display: true,
-  },
-
-  {
-    id: "visualization",
-    title: "Scientific Visualization",
-    subtitle: "Science Visualizations I've Created!",
-    categories: ["Scientific Computing", "Visualization"],
-    description:
-      "This project showcases various scientific visualizations I've created using tools like Matplotlib, Plotly, and D3.js. These visualizations help communicate complex scientific data in an intuitive and engaging manner.",
-    technologies: [],
-    image: null,
-    page: null,
-    github: null,
-    demo: null,
-    file: null,
-    featured: false,
-    display: false,
+    experience: false,
   },
 
   {
@@ -99,5 +86,24 @@ export const projects = [
     file: null,
     featured: false,
     display: false,
+    experience: false,
+  },
+
+  {
+    id: "drumcorp",
+    title: "Drum Corps International",
+    subtitle: "My Major League Marching Band Experience",
+    categories: ["Performing Arts", "Dance", "Sports"],
+    description:
+      "Drum Corps International is a competitive marching band competition that tours across the United States during the summer. I was a member of the Bluecoats Drum and Bugle Corps and Pacific Crest Drum and Bugle Corps, where I performed as part of the colorguard and participated in numerous competitions and performances.",
+    technologies: [],
+    image: null,
+    page: "dci.html",
+    github: null,
+    demo: null,
+    file: null,
+    featured: true,
+    display: true,
+    experience: true,
   },
 ];
