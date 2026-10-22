@@ -35,7 +35,9 @@ python3 -m http.server 8000
 ## Adding a new project
 
 1. Add an entry to `data/projects.js` (id, title, subtitle, categories, description,
-   technologies, image, page, github, demo, file, featured, display).
+   technologies, image, page, github, demo, file, featured, display). Optional:
+   `button_prompt` overrides the card button text (defaults to "View Project", or
+   "View Experience" when `experience: true`).
 2. Clone `pages/projects/project-template.html` for the project's dedicated page.
 3. Wire up its assets (images, files, links).
 

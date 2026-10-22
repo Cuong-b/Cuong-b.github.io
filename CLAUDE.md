@@ -46,7 +46,9 @@ projects to employers/visitors — not an app-heavy monolith. Static site, vanil
 ## Adding a new project (existing pattern — follow it, but flag improvements)
 
 1. Add an entry to `data/projects.js` (id, title, subtitle, categories, description,
-   technologies, image, page, github, demo, file, featured, display).
+   technologies, image, page, github, demo, file, featured, display, experience). Optional:
+   `button_prompt` overrides the card button text (defaults to "View Project", or
+   "View Experience" when `experience: true`).
 2. Clone `pages/projects/project-template.html` for the project's dedicated page.
 3. Wire up assets (images, files, links).
 

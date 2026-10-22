@@ -106,4 +106,23 @@ export const projects = [
     display: true,
     experience: true,
   },
+
+  {
+    id: "woodworking",
+    title: "Second Growth Works",
+    subtitle: "My woodworking portfolio.",
+    categories: ["Craft", "Design", "Woodworking"],
+    description:
+      "Second Growth Works is my woodworking portfolio, where I showcase my woodworking projects and designs. It includes a variety of pieces, from furniture to jewelry.",
+    technologies: [],
+    image: null,
+    page: "https://secondgrowthworks.com/",
+    github: null,
+    demo: null,
+    file: null,
+    featured: true,
+    display: true,
+    experience: false,
+    button_prompt: "View Page",
+  },
 ];

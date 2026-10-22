@@ -10,7 +10,9 @@ export function createProjectCard(project) {
   card.appendChild(createTechnologiesContainer(project));
 
   if (project.page) {
-    if (project.experience) {
+    if (project.button_prompt) {
+      var linkDescription = project.button_prompt;
+    } else if (project.experience) {
       var linkDescription = "View Experience";
     } else {
       var linkDescription = "View Project";
